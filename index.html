@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="cgnmail/smtp.js"></script>
+<script src="cgnmail/cgnmail.js"></script>
+
+</head>
+<body>
+
+<div id="frmContact">
+	<div id="mail-status"></div>
+	<div>
+		<label style="padding-top:20px;">Name</label>
+		<span id="userName-info" class="info"></span><br/>
+		<input type="text" name="userName" id="userName">
+	</div>
+	<div>
+		<label>Email</label>
+		<span id="userEmail-info"></span><br/>
+		<input type="text" name="userEmail" id="userEmail">
+	</div>
+	<div>
+		<label>Subject</label> 
+		<span id="subject-info"></span><br/>
+		<input type="text" name="subject" id="subject">
+	</div>
+	<div>
+		<label>Content</label> 
+		<span id="content-info"></span><br/>
+		<textarea name="content" id="content" cols="60" rows="6"></textarea>
+	</div>
+	<div>
+		<label>Captcha</label> 
+		<span id="captcha-info"></span><br/>
+		<input type="text" name="captcha" id="captcha"><br>
+	</div>
+	<div>
+		<img id="captcha_code" src="cgnmail/captcha_code.php" width="70" height="30" 
+		onclick="this.src='cgnmail/captcha_code.php';"/>
+		<div id="capt"></div>
+	</div>
+	<div>
+		<button name="submit" onclick="sendMail();">Send</button>
+	</div>
+</div>
+
+</body>
+</html>
+                
